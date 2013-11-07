@@ -1,0 +1,24 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bourbon';
+@import 'grid-settings';
+@import 'neat';
+
+.zero {
+  @include outer-container;
+  code {
+    display: block;
+  }
+
+  #alpha, #beta{
+    @include span-columns(6);
+    background-color: lightblue;
+  }
+
+  #beta {
+    @include omega();
+  }
+}
+
