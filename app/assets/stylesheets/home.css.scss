@@ -6,6 +6,10 @@
 @import 'grid-settings';
 @import 'neat';
 
+body {
+  margin: 0;
+}
+
 .zero {
   @include outer-container;
   code {
@@ -14,11 +18,18 @@
 
   #alpha, #beta{
     @include span-columns(6);
+    @include media($tablet){
+      @include span-columns(6);
+    }
     background-color: lightblue;
   }
 
   #beta {
     @include omega();
   }
-}
 
+  #alpha1, #beta1{
+    @include span-columns(6);
+    background-color: pink;
+  }
+}
